@@ -1,3 +1,4 @@
+import { Header } from "@/components";
 import Head from "next/head";
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-bold text-3xl text-white">
-        <h1>Twitter 2.0</h1>
+        <Header label="Home" />
       </main>
     </>
   );
