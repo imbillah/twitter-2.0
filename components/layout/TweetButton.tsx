@@ -1,9 +1,14 @@
-import Link from "next/link";
-import React from "react";
+import useLoginModal from "@/hooks/useLoginModal";
+import React, { useCallback } from "react";
 import { FaFeather } from "react-icons/fa";
 const TweetButton = () => {
+  const loginModal = useLoginModal();
+
+  const handleTweet = useCallback(() => {
+    loginModal.onOpen();
+  }, [loginModal]);
   return (
-    <Link href="/">
+    <div onClick={handleTweet}>
       {/* mobile */}
       <div
         className="
@@ -26,7 +31,7 @@ const TweetButton = () => {
       </div>
       <div
         className="
-      mt-5
+      mt-8
       hidden
       lg:block
       rounded-full
@@ -42,7 +47,7 @@ const TweetButton = () => {
           Tweet
         </p>
       </div>
-    </Link>
+    </div>
   );
 };
 

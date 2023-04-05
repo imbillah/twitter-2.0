@@ -29,7 +29,8 @@ const SidebarItem: React.FC<sidebarItemProps> = ({
       {/* dwsktop view */}
       <div>
         <div
-          className="hidden relative lg:flex items-center gap-4 p-4 hover:bg-slate-400 hover:rounded-sm
+          className="hidden relative lg:flex items-center gap-4 p-3  hover:bg-slate-400 hover:rounded-full
+
         hover:bg-opacity-20 cursor-pointer"
         >
           <Icon size={20} color="white" />

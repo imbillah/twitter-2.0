@@ -31,7 +31,7 @@ const Sidebar = () => {
           "
           >
             <Link href="/">
-              <BsTwitter size={25} color="white" />
+              <BsTwitter size={30} className="text-sky-500" />
             </Link>
           </div>
           {items.map((item) => (
