@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Toaster />
       <RegisterModal />
       <LoginModal />
-
       <Layout>
         <Component {...pageProps} />
       </Layout>
