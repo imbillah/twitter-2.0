@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useCallback, useMemo } from "react";
 import { toast } from "react-hot-toast";
-
 import useCurrentUser from "./useCurrentUser";
 import useLoginModal from "./useLoginModal";
 import usePost from "./usePost";
@@ -33,12 +32,10 @@ const useLike = ({ postId, userId }: { postId: string; userId?: string }) => {
       } else {
         request = () => axios.post("/api/like", { postId });
       }
-
       await request();
       mutateFetchedPost();
       mutateFetchedPosts();
-
-      toast.success("Success");
+      toast.success("Your action recorded");
     } catch (error) {
       toast.error("Something went wrong");
     }

@@ -13,7 +13,6 @@ interface PostItemProps {
 const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
   const router = useRouter();
   const loginModal = useLoginModal();
-
   const { data: currentUser } = useCurrentUser();
   const { hasLiked, toggleLike } = useLike({ postId: data.id, userId });
   const goToUser = useCallback(
@@ -30,7 +29,6 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
   const onLike = useCallback(
     async (ev: any) => {
       ev.stopPropagation();
-
       if (!currentUser) {
         return loginModal.onOpen();
       }
